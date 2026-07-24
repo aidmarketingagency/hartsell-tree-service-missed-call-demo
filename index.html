@@ -6,19 +6,18 @@
   Owner: Tom Hartsell. Phone: (704) 536-8069. Founded 1989. BBB A+ since 2011.
   Dossier ID: b0589a42-c12e-40f2-a537-0317eadc3d43
 
-  DESIGNER'S NOTE (D2 call, required by the v2 spec):
-  Scraped hartselltreeservices.com. Finding: C-grade basic builder site, no coherent
-  color story, no real logo mark, no consistently used CTA color or brand hex. The
-  palette is entirely generic defaults (white body, stock grey nav, zero design intent).
-  This is bucket (c) NO BRAND SIGNAL: Midnight Authority fallback. Using the documented
-  AIDHQ corporate standard: #0D0D0F void, #1E1E22 graphite, #C9A84C brass/amber,
-  #F0EDE8 bone. Font pairing: Cormorant Garamond (display, authority/refined) + Plus
-  Jakarta Sans (body). Both are the Midnight Authority standard pair, appropriate here
-  since this IS the fallback case.
+  DESIGNER'S NOTE (D2 call, required by the v2 spec) -- REBRANDED 2026-07-24:
+  Recon finding: bucket (c) NO BRAND SIGNAL (no website/socials carrying a coherent
+  color story or logo mark). Per contractor-demo-v2 D2(c), the AID Midnight Authority
+  fallback is BANNED on prospect pages (it is AID's own brand). This page now uses the
+  NEW trade-agnostic fallback: Trade-Neutral Slate -- void 14161A, panel 1E222B, ink
+  F1EDE4, accent teal 17B3A6. Teal reads well for tree service and can never be mistaken
+  for AID brass. Type pairing: Fraunces (display) + Archivo (body).
 
-  D3 image: client photo hotlinked from their own CDN (estage-test.b-cdn.net) — a real
-  job-site photo from their own site. Scrim + grain (feTurbulence SVG) + duotone pass
-  toward #C9A84C brass applied in CSS.
+  D3 image: no client photos exist. Using a Pixabay CC0 photo (id 1059416) -- an arborist
+  roped/harnessed into a tree canopy running a chainsaw mid-cut, autumn foliage. Downloaded
+  local asset (assets/hero-arborist-canopy.jpg), NOT hotlinked. Scrim + feTurbulence grain
+  + teal duotone color-grade applied in CSS (never raw stock).
 
   D4 personality layer: storm-damage oak emergency removal scenario, Harrisburg, NC.
   Emergency tree removal in NC: $1,500-$5,000+ per job.
@@ -33,9 +32,9 @@
   Frame: one storm-damage call to voicemail = $2,000+ to whoever answered first.
   This is conservative (mid-range of $1,500-$5,000), per-job framing, cannot go stale.
 
-  Font pairing: Cormorant Garamond + Plus Jakarta Sans (Midnight Authority standard,
-  used here because this IS the MA fallback case per spec). These have not appeared in
-  the roofing builds (Peak: Big Shoulders + Libre Franklin; Craftsman: Fraunces + Archivo).
+  Font pairing: Fraunces (display) + Archivo (body) -- the Trade-Neutral Slate reference
+  pairing. Replaces the former AID Midnight Authority type pair, which is banned on
+  prospect pages (it is AID's own brand signature).
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -54,7 +53,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet"/>
 
 
 
@@ -369,14 +368,14 @@
     <!-- Tree + chainsaw SVG brandmark -->
     <svg class="hdr-svg" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <!-- Tree trunk -->
-      <rect x="16" y="26" width="4" height="7" rx="1" fill="#C9A84C" opacity=".7"/>
+      <rect x="16" y="26" width="4" height="7" rx="1" fill="#17B3A6" opacity=".7"/>
       <!-- Tree canopy layers -->
-      <polygon points="18,3 27,16 9,16" fill="#C9A84C" opacity=".6"/>
-      <polygon points="18,9 25,20 11,20" fill="#C9A84C" opacity=".85"/>
-      <polygon points="18,14 23,24 13,24" fill="#C9A84C"/>
+      <polygon points="18,3 27,16 9,16" fill="#17B3A6" opacity=".6"/>
+      <polygon points="18,9 25,20 11,20" fill="#17B3A6" opacity=".85"/>
+      <polygon points="18,14 23,24 13,24" fill="#17B3A6"/>
       <!-- Chainsaw cut mark (diagonal slash) -->
-      <line x1="24" y1="19" x2="32" y2="27" stroke="#F0EDE8" stroke-width="2" stroke-linecap="round" opacity=".7"/>
-      <circle cx="32" cy="27" r="2" fill="#C9A84C" opacity=".9"/>
+      <line x1="24" y1="19" x2="32" y2="27" stroke="#F1EDE4" stroke-width="2" stroke-linecap="round" opacity=".7"/>
+      <circle cx="32" cy="27" r="2" fill="#17B3A6" opacity=".9"/>
     </svg>
     <div class="hdr-text">
       <span class="hdr-name">Hartsell Tree Service</span>
@@ -598,7 +597,7 @@
       img=document.createElement('img');
       img.src=IMG;img.alt='';img.setAttribute('data-aid-icon','');
       img.style.cssText='width:100%;height:100%;object-fit:cover;border-radius:50%;position:absolute;top:0;left:0;pointer-events:none;';
-      b.style.background='#0D0D0F';
+      b.style.background='#14161A';
       b.appendChild(img);
     }
     var c=container();
